@@ -1,0 +1,61 @@
+button
+  -webkit-border-radius: 50
+  -moz-border-radius: 50
+  font-family: Arial
+  text-decoration: none
+
+.counter
+  button
+    padding: 10px 20px 10px 20px
+    font-size: 30px
+    border-radius: 50px
+    color: #ffffff
+
+  .btn-decrease
+    $dec-start = #3498db
+    $dec-end = #2980b9
+
+    background: $dec-start
+    background-image: -webkit-linear-gradient(top, $dec-start, $dec-end)
+    background-image: -moz-linear-gradient(top, $dec-start, $dec-end)
+    background-image: -ms-linear-gradient(top, $dec-start, $dec-end)
+    background-image: -o-linear-gradient(top, $dec-start, $dec-end)
+    background-image: linear-gradient(to bottom, $dec-start, $dec-end)
+
+  .btn-decrease:hover 
+    $dec-hover-start = #3cb0fd
+    $dec-hover-end = #3498db
+
+    background: $dec-hover-start
+    background-image: -webkit-linear-gradient(top, $dec-hover-start, $dec-hover-end)
+    background-image: -moz-linear-gradient(top, $dec-hover-start, $dec-hover-end)
+    background-image: -ms-linear-gradient(top, $dec-hover-start, $dec-hover-end)
+    background-image: -o-linear-gradient(top, $dec-hover-start, $dec-hover-end)
+    background-image: linear-gradient(to bottom, $dec-hover-start, $dec-hover-end)
+    text-decoration: none
+
+  .btn-increase
+    $inc-start = #d93434
+    $inc-end = #b82b2b
+
+    background: $inc-start
+    background-image: -webkit-linear-gradient(top, $inc-start, $inc-end)
+    background-image: -moz-linear-gradient(top, $inc-start, $inc-end)
+    background-image: -ms-linear-gradient(top, $inc-start, $inc-end)
+    background-image: -o-linear-gradient(top, $inc-start, $inc-end)
+    background-image: linear-gradient(to bottom, $inc-start, $inc-end)
+
+  .btn-increase:hover 
+    $inc-hover-start = #fc3c3c
+    $inc-hover-end = #d93434
+
+    background: $inc-hover-start
+    background-image: -webkit-linear-gradient(top, $inc-hover-start, $inc-hover-end)
+    background-image: -moz-linear-gradient(top, $inc-hover-start, $inc-hover-end)
+    background-image: -ms-linear-gradient(top, $inc-hover-start, $inc-hover-end)
+    background-image: -o-linear-gradient(top, $inc-hover-start, $inc-hover-end)
+    background-image: linear-gradient(to bottom, $inc-hover-start, $inc-hover-end)
+    text-decoration: none
+
+  .button-list
+    clear: both

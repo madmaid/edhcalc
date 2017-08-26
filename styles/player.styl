@@ -1,3 +1,5 @@
+@import "./const.styl"
+
 .player
   float: left
 
@@ -8,7 +10,10 @@
   box-sizing: border-box
 
 .player-name
-  font-size: 50px
+  @media all and (min-width: 480px)
+    font-size: FONT-BASE * 5
+  @media all and (max-width: 480px)
+    font-size: FONT-BASE * 2.5
 
 .player-li
   display: inline-block

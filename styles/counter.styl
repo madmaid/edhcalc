@@ -1,3 +1,4 @@
+@import "./const.styl"
 input
   padding: 0
   margin: 0
@@ -5,14 +6,23 @@ input
 
 .counter-name
   float: left
-  font-size: 30px
+  @media all and (min-width: 480px)
+    font-size: FONT-BASE * 3
+  @media all and (mmx-width: 480px)
+    font-size: FONT-BASE * 2
 
 .counter-value
   float: right
-  font-size: 30px
+  @media all and (min-width: 480px)
+    font-size: FONT-BASE * 3
+  @media all and (mmx-width: 480px)
+    font-size: FONT-BASE * 2
 
 .flex-counter
   .counter-name
     margin-right: 0
-    font-size: 20px
+    @media all and (min-width: 480px)
+      font-size: FONT-BASE * 2
+    @media all and (mmx-width: 480px)
+      font-size: FONT-BASE * 1.5
 

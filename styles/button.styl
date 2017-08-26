@@ -1,20 +1,29 @@
+@import "./const.styl"
+
 $dec = #3498db
 $dec-hover = #3cb0fd
 $inc = #d93434
 $inc-hover = #fc3c3c
 
 button
-  -webkit-border-radius: 50
-  -moz-border-radius: 50
+  -webkit-border-radius: 50px
+  -moz-border-radius: 50px
   font-family: Arial
   text-decoration: none
 
 .counter
   button
-    padding: 10px 20px 10px 20px
-    font-size: 30px
-    border-radius: 50px
     color: #ffffff
+
+    @media all and (min-width: 480px)
+      padding: 10px 20px 10px 20px
+      font-size: 30px
+      border-radius: 50px
+
+    @media all and (max-width: 480px)
+      padding: 5px 10px 5px 10px
+      font-size: 15px
+      border-radius: 25px
 
   .btn-decrease
     background: $dec

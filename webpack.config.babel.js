@@ -3,6 +3,9 @@ import path from "path";
 
 export default {
   entry: "./src/index.jsx",
+
+  // for v1
+  /*
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -16,7 +19,42 @@ export default {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
+  */
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/dist/'
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+  },
   module: {
+    rules: [
+      {
+        test: /\.js[x]?$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            /*
+            options: {
+              presets: [
+                ['env', {'modules': false}],
+                'react'
+              ]
+            },
+            */
+          }
+        ]
+      },
+      {
+        test: /\.(css|styl)$/,
+        use: ['style-loader', 'css-loader', 'stylus-loader']
+      }
+    ]
+    /*
     loaders: [
       {
         test: /\.js[x]?$/,
@@ -28,5 +66,6 @@ export default {
         loader: 'style-loader!css-loader!stylus-loader'
       }
     ]
+    */
   },
 }

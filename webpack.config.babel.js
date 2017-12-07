@@ -4,22 +4,6 @@ import path from "path";
 export default {
   entry: "./src/index.jsx",
 
-  // for v1
-  /*
-  output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/dist/'
-  },
-  devServer: {
-    publicPath: '/dist/',
-    port: 3000,
-    inline: true
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
-  */
   resolve: {
     extensions: ['.js', '.jsx']
   },
@@ -38,14 +22,6 @@ export default {
         use: [
           {
             loader: 'babel-loader',
-            /*
-            options: {
-              presets: [
-                ['env', {'modules': false}],
-                'react'
-              ]
-            },
-            */
           }
         ]
       },
@@ -54,18 +30,5 @@ export default {
         use: ['style-loader', 'css-loader', 'stylus-loader']
       }
     ]
-    /*
-    loaders: [
-      {
-        test: /\.js[x]?$/,
-        loaders: ['babel'],
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.styl$/,
-        loader: 'style-loader!css-loader!stylus-loader'
-      }
-    ]
-    */
   },
 }
